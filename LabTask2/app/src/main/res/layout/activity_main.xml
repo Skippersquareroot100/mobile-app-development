@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/lab"
+        android:layout_width="219dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sid"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Id"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lab" />
+
+    <EditText
+        android:id="@+id/cg"
+        android:layout_width="221dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="CGPA"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sid" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="221dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Total Completed Credit"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cg" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/radioCSE"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:text="CSE" />
+
+        <RadioButton
+            android:id="@+id/radioEEE"
+            android:layout_width="91dp"
+            android:layout_height="match_parent"
+            android:text="EEE" />
+
+        <RadioButton
+            android:id="@+id/radioBBA"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:text="BBA" />
+
+        <RadioButton
+            android:id="@+id/radioLAW"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:text="LAW" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="372dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="DEPARTMENT"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="372dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="32dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Favorite Languages"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/checkBoxjava"
+        android:layout_width="69dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="31dp"
+        android:text="JAVA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/checkBox2c"
+        android:layout_width="67dp"
+        android:layout_height="51dp"
+        android:text="C++"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxjava"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/checkBox3cs"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        android:text="C#"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2c"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/checkBox4kotlin"
+        android:layout_width="86dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="64dp"
+        android:text="Kotlin"
+        app:layout_constraintStart_toEndOf="@+id/checkBox2c"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:text="submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3cs" />
+
+    <TextView
+        android:id="@+id/showname"
+        android:layout_width="339dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="13dp"
+        android:text="TextView"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/showid"
+        android:layout_width="339dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="36dp"
+        android:visibility="gone"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showname" />
+
+    <TextView
+        android:id="@+id/showcgpa"
+        android:layout_width="339dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="36dp"
+        android:visibility="gone"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showid" />
+
+    <TextView
+        android:id="@+id/showcredit"
+        android:layout_width="339dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="36dp"
+        android:visibility="gone"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showcgpa" />
+
+    <TextView
+        android:id="@+id/showfav"
+        android:layout_width="339dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="36dp"
+        android:visibility="gone"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showcredit" />
+
+    <TextView
+        android:id="@+id/showdept"
+        android:layout_width="339dp"
+        android:layout_height="26dp"
+
+        android:layout_marginStart="36dp"
+        android:visibility="gone"
+        android:text="TextView"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showfav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
